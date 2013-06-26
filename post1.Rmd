@@ -1,0 +1,65 @@
+---
+title: NVD3
+framework: bootplus
+layout: post
+mode: selfcontained
+github: {user: ramnathv, repo: rCharts}
+navbar:
+  title: rCharts
+  items:
+    - {item: Home, icon: home, href: index, class: active}
+    - {item: Start, icon: leaf, href: start}
+    - {item: Gallery, icon: signal, href: gallery}
+    - {item: Libraries, icon: bookmark, href: libraries, dropdown: true, 
+        class: dropdown, menu: [
+         {item: Dimple, href: dimple, icon: ""},
+         {item: Highcharts, href: highcharts, icon: ""},
+         {item: Leaflet, href: leaflet, icon: ""},
+         {item: Morris, href: morris, icon: ""},
+         {item: NVD3, href: nvd3, icon: ""},
+         {item: Polychart, href: polychart, icon: ""},
+         {item: Rickshaw, href: rickshaw, icon: ""},
+         {item: xCharts, href: xcharts, icon: ""}
+        ]
+      }
+ext_widgets: {rCharts: [libraries/nvd3]}
+highlighter: prettify
+hitheme    : twitter-bootstrap
+lead : >
+  NVD3 is a nice library
+--- 
+
+# Section 1
+
+```{r setup, echo = F, cache = F}
+knitr::knit_hooks$set(output = function(x, options){
+  paste('<div class="bs-docs-example">', x, '</div>')
+})
+require(rCharts)
+options(RCHART_WIDTH = 700)
+```
+
+
+## New
+
+Some content
+
+--- 
+
+# Scatterplots
+
+## Example 1
+
+Some content
+
+```{r chart1, results = 'asis', comment = NA, message = F, echo = F}
+n1 <- nPlot(mpg ~ wt, data = mtcars, type = 'scatterChart')
+n1$print('chart1')
+```
+
+```{r eval = F, ref.label='chart1'}
+```
+
+
+
+
