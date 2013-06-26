@@ -24,7 +24,7 @@
     }, 100)
 
     // make code pretty
-    window.prettyPrint && prettyPrint()
+    // window.prettyPrint && prettyPrint()
 
     // add-ons
     $('.add-on :checkbox').on('click', function () {
